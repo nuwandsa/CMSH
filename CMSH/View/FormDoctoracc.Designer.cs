@@ -56,6 +56,14 @@
             this.labeldapweight = new System.Windows.Forms.Label();
             this.labeldapbmi = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.buttondapcheckreports = new System.Windows.Forms.Button();
+            this.buttondapstatus = new System.Windows.Forms.Button();
+            this.buttondapprescribe = new System.Windows.Forms.Button();
+            this.buttondapcheckups = new System.Windows.Forms.Button();
+            this.buttondaptherapies = new System.Windows.Forms.Button();
+            this.buttondapncd = new System.Windows.Forms.Button();
+            this.buttondanewp = new System.Windows.Forms.Button();
+            this.buttondapcheck = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxdadrimg)).BeginInit();
             this.paneldapatient.SuspendLayout();
@@ -78,7 +86,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(667, 177);
+            this.panel2.Size = new System.Drawing.Size(706, 177);
             this.panel2.TabIndex = 1;
             // 
             // label4
@@ -88,7 +96,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(616, 2);
+            this.label4.Location = new System.Drawing.Point(655, 2);
             this.label4.MaximumSize = new System.Drawing.Size(1366, 768);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(21, 20);
@@ -103,7 +111,7 @@
             this.labelmd.BackColor = System.Drawing.Color.Transparent;
             this.labelmd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelmd.ForeColor = System.Drawing.Color.White;
-            this.labelmd.Location = new System.Drawing.Point(586, 5);
+            this.labelmd.Location = new System.Drawing.Point(625, 5);
             this.labelmd.Name = "labelmd";
             this.labelmd.Size = new System.Drawing.Size(14, 20);
             this.labelmd.TabIndex = 2;
@@ -117,7 +125,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(648, 4);
+            this.label2.Location = new System.Drawing.Point(687, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 20);
             this.label2.TabIndex = 1;
@@ -175,7 +183,7 @@
             this.labeldctrqualifications.BackColor = System.Drawing.Color.Transparent;
             this.labeldctrqualifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeldctrqualifications.ForeColor = System.Drawing.Color.White;
-            this.labeldctrqualifications.Location = new System.Drawing.Point(255, 35);
+            this.labeldctrqualifications.Location = new System.Drawing.Point(388, 35);
             this.labeldctrqualifications.Name = "labeldctrqualifications";
             this.labeldctrqualifications.Size = new System.Drawing.Size(76, 13);
             this.labeldctrqualifications.TabIndex = 8;
@@ -219,6 +227,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.paneldapatient.BackColor = System.Drawing.Color.Transparent;
+            this.paneldapatient.Controls.Add(this.buttondanewp);
+            this.paneldapatient.Controls.Add(this.buttondapncd);
+            this.paneldapatient.Controls.Add(this.buttondaptherapies);
+            this.paneldapatient.Controls.Add(this.buttondapcheckups);
+            this.paneldapatient.Controls.Add(this.buttondapprescribe);
+            this.paneldapatient.Controls.Add(this.buttondapstatus);
+            this.paneldapatient.Controls.Add(this.buttondapcheckreports);
             this.paneldapatient.Controls.Add(this.radioButton1);
             this.paneldapatient.Controls.Add(this.labeldapbmi);
             this.paneldapatient.Controls.Add(this.labeldapweight);
@@ -233,10 +248,12 @@
             this.paneldapatient.Controls.Add(this.labeldaaddress);
             this.paneldapatient.Controls.Add(this.labeldapname);
             this.paneldapatient.Controls.Add(this.pictureBoxptnt);
+            this.paneldapatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paneldapatient.Location = new System.Drawing.Point(0, 249);
             this.paneldapatient.Name = "paneldapatient";
-            this.paneldapatient.Size = new System.Drawing.Size(664, 443);
+            this.paneldapatient.Size = new System.Drawing.Size(703, 443);
             this.paneldapatient.TabIndex = 11;
+            this.paneldapatient.Visible = false;
             // 
             // pictureBoxptnt
             // 
@@ -393,13 +410,126 @@
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // buttondapcheckreports
+            // 
+            this.buttondapcheckreports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttondapcheckreports.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttondapcheckreports.BackgroundImage")));
+            this.buttondapcheckreports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttondapcheckreports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttondapcheckreports.ForeColor = System.Drawing.Color.White;
+            this.buttondapcheckreports.Location = new System.Drawing.Point(210, 15);
+            this.buttondapcheckreports.Name = "buttondapcheckreports";
+            this.buttondapcheckreports.Size = new System.Drawing.Size(141, 149);
+            this.buttondapcheckreports.TabIndex = 16;
+            this.buttondapcheckreports.Text = "Check Reports";
+            this.buttondapcheckreports.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttondapcheckreports.UseVisualStyleBackColor = false;
+            // 
+            // buttondapstatus
+            // 
+            this.buttondapstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttondapstatus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttondapstatus.BackgroundImage")));
+            this.buttondapstatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttondapstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttondapstatus.ForeColor = System.Drawing.Color.White;
+            this.buttondapstatus.Location = new System.Drawing.Point(373, 15);
+            this.buttondapstatus.Name = "buttondapstatus";
+            this.buttondapstatus.Size = new System.Drawing.Size(141, 149);
+            this.buttondapstatus.TabIndex = 17;
+            this.buttondapstatus.Text = "Previous Special Cases/Add Status";
+            this.buttondapstatus.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttondapstatus.UseVisualStyleBackColor = false;
+            // 
+            // buttondapprescribe
+            // 
+            this.buttondapprescribe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttondapprescribe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttondapprescribe.BackgroundImage")));
+            this.buttondapprescribe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttondapprescribe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttondapprescribe.ForeColor = System.Drawing.Color.White;
+            this.buttondapprescribe.Location = new System.Drawing.Point(535, 15);
+            this.buttondapprescribe.Name = "buttondapprescribe";
+            this.buttondapprescribe.Size = new System.Drawing.Size(141, 149);
+            this.buttondapprescribe.TabIndex = 18;
+            this.buttondapprescribe.Text = "Prescribe Drugs";
+            this.buttondapprescribe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttondapprescribe.UseVisualStyleBackColor = false;
+            // 
+            // buttondapcheckups
+            // 
+            this.buttondapcheckups.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttondapcheckups.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttondapcheckups.BackgroundImage")));
+            this.buttondapcheckups.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttondapcheckups.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttondapcheckups.ForeColor = System.Drawing.Color.Black;
+            this.buttondapcheckups.Location = new System.Drawing.Point(210, 194);
+            this.buttondapcheckups.Name = "buttondapcheckups";
+            this.buttondapcheckups.Size = new System.Drawing.Size(141, 149);
+            this.buttondapcheckups.TabIndex = 19;
+            this.buttondapcheckups.Text = "Recommend";
+            this.buttondapcheckups.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttondapcheckups.UseVisualStyleBackColor = false;
+            // 
+            // buttondaptherapies
+            // 
+            this.buttondaptherapies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttondaptherapies.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttondaptherapies.BackgroundImage")));
+            this.buttondaptherapies.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttondaptherapies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttondaptherapies.ForeColor = System.Drawing.Color.White;
+            this.buttondaptherapies.Location = new System.Drawing.Point(373, 194);
+            this.buttondaptherapies.Name = "buttondaptherapies";
+            this.buttondaptherapies.Size = new System.Drawing.Size(141, 149);
+            this.buttondaptherapies.TabIndex = 20;
+            this.buttondaptherapies.Text = "Recommend Ttherapies";
+            this.buttondaptherapies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttondaptherapies.UseVisualStyleBackColor = false;
+            // 
+            // buttondapncd
+            // 
+            this.buttondapncd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttondapncd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttondapncd.BackgroundImage")));
+            this.buttondapncd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttondapncd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttondapncd.ForeColor = System.Drawing.Color.White;
+            this.buttondapncd.Location = new System.Drawing.Point(535, 194);
+            this.buttondapncd.Name = "buttondapncd";
+            this.buttondapncd.Size = new System.Drawing.Size(141, 149);
+            this.buttondapncd.TabIndex = 21;
+            this.buttondapncd.Text = "NCD Screaning";
+            this.buttondapncd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttondapncd.UseVisualStyleBackColor = false;
+            // 
+            // buttondanewp
+            // 
+            this.buttondanewp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttondanewp.ForeColor = System.Drawing.Color.White;
+            this.buttondanewp.Location = new System.Drawing.Point(373, 376);
+            this.buttondanewp.Name = "buttondanewp";
+            this.buttondanewp.Size = new System.Drawing.Size(141, 35);
+            this.buttondanewp.TabIndex = 22;
+            this.buttondanewp.Text = "New Patient";
+            this.buttondanewp.UseVisualStyleBackColor = false;
+            // 
+            // buttondapcheck
+            // 
+            this.buttondapcheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttondapcheck.ForeColor = System.Drawing.Color.White;
+            this.buttondapcheck.Location = new System.Drawing.Point(585, 192);
+            this.buttondapcheck.Name = "buttondapcheck";
+            this.buttondapcheck.Size = new System.Drawing.Size(75, 23);
+            this.buttondapcheck.TabIndex = 12;
+            this.buttondapcheck.Text = "Check";
+            this.buttondapcheck.UseVisualStyleBackColor = false;
+            // 
             // FormDoctoracc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(666, 706);
+            this.ClientSize = new System.Drawing.Size(705, 706);
+            this.Controls.Add(this.buttondapcheck);
             this.Controls.Add(this.paneldapatient);
             this.Controls.Add(this.textBoxdapid);
             this.Controls.Add(this.label3);
@@ -448,5 +578,13 @@
         private System.Windows.Forms.Label labeldaaddress;
         private System.Windows.Forms.Label labeldapname;
         private System.Windows.Forms.PictureBox pictureBoxptnt;
+        private System.Windows.Forms.Button buttondapcheckreports;
+        private System.Windows.Forms.Button buttondanewp;
+        private System.Windows.Forms.Button buttondapncd;
+        private System.Windows.Forms.Button buttondaptherapies;
+        private System.Windows.Forms.Button buttondapcheckups;
+        private System.Windows.Forms.Button buttondapprescribe;
+        private System.Windows.Forms.Button buttondapstatus;
+        private System.Windows.Forms.Button buttondapcheck;
     }
 }
