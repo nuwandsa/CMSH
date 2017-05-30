@@ -245,6 +245,7 @@
             this.buttoncaphrcreate.TabIndex = 23;
             this.buttoncaphrcreate.Text = "Create";
             this.buttoncaphrcreate.UseVisualStyleBackColor = false;
+            this.buttoncaphrcreate.Click += new System.EventHandler(this.buttoncaphrcreate_Click);
             // 
             // buttoncaphrback
             // 
@@ -696,6 +697,8 @@
             this.textBoxrepassword.Size = new System.Drawing.Size(157, 26);
             this.textBoxrepassword.TabIndex = 14;
             this.textBoxrepassword.Text = "Reenter Password";
+            this.textBoxrepassword.Enter += new System.EventHandler(this.TextBox_GotFocus);
+            this.textBoxrepassword.Leave += new System.EventHandler(this.TextLostFocus);
             // 
             // password
             // 
@@ -706,6 +709,8 @@
             this.password.Size = new System.Drawing.Size(157, 26);
             this.password.TabIndex = 13;
             this.password.Text = "Password";
+            this.password.Enter += new System.EventHandler(this.TextBox_GotFocus);
+            this.password.Leave += new System.EventHandler(this.TextLostFocus);
             // 
             // textBoxusername
             // 
@@ -716,6 +721,8 @@
             this.textBoxusername.Size = new System.Drawing.Size(157, 26);
             this.textBoxusername.TabIndex = 12;
             this.textBoxusername.Text = "User Name";
+            this.textBoxusername.Enter += new System.EventHandler(this.TextBox_GotFocus);
+            this.textBoxusername.Leave += new System.EventHandler(this.TextLostFocus);
             // 
             // textBoxnicno
             // 
@@ -726,6 +733,8 @@
             this.textBoxnicno.Size = new System.Drawing.Size(157, 26);
             this.textBoxnicno.TabIndex = 11;
             this.textBoxnicno.Text = "Nic No";
+            this.textBoxnicno.Enter += new System.EventHandler(this.TextBox_GotFocus);
+            this.textBoxnicno.Leave += new System.EventHandler(this.TextLostFocus);
             // 
             // textBoxcontactno
             // 
@@ -736,6 +745,8 @@
             this.textBoxcontactno.Size = new System.Drawing.Size(157, 26);
             this.textBoxcontactno.TabIndex = 10;
             this.textBoxcontactno.Text = "Contact No";
+            this.textBoxcontactno.Enter += new System.EventHandler(this.TextBox_GotFocus);
+            this.textBoxcontactno.Leave += new System.EventHandler(this.TextLostFocus);
             // 
             // textBoxlastname
             // 
@@ -746,6 +757,8 @@
             this.textBoxlastname.Size = new System.Drawing.Size(157, 26);
             this.textBoxlastname.TabIndex = 9;
             this.textBoxlastname.Text = "Last Name";
+            this.textBoxlastname.Enter += new System.EventHandler(this.TextBox_GotFocus);
+            this.textBoxlastname.Leave += new System.EventHandler(this.TextLostFocus);
             // 
             // textBoxfirstname
             // 
@@ -756,13 +769,16 @@
             this.textBoxfirstname.Size = new System.Drawing.Size(157, 26);
             this.textBoxfirstname.TabIndex = 8;
             this.textBoxfirstname.Text = "First Name";
+            this.textBoxfirstname.TextChanged += new System.EventHandler(this.textBoxfirstname_TextChanged);
+            this.textBoxfirstname.Enter += new System.EventHandler(this.TextBox_GotFocus);
+            this.textBoxfirstname.Leave += new System.EventHandler(this.TextLostFocus);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);

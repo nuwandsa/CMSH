@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CMSH.Control;
+using CMSH.Model;
 
 namespace CMSH.View
 {
@@ -36,7 +38,7 @@ namespace CMSH.View
         public void textBoxfirstname_load(object sender,EventArgs e)
         {
             this.ActiveControl = textBoxfirstname;
-            textBoxfirstname.GotFocus += new EventHandler(this.TextGotFocus);
+            textBoxfirstname.GotFocus += new EventHandler(this.TextBox_GotFocus);
             textBoxfirstname.LostFocus += new EventHandler(this.TextLostFocus);
 
         }
@@ -44,29 +46,25 @@ namespace CMSH.View
         public void textBoxlastname_load(object sender, EventArgs e)
         {
             this.ActiveControl = textBoxlastname;
-            textBoxlastname.GotFocus += new EventHandler(this.TextGotFocus);
+            textBoxlastname.GotFocus += new EventHandler(this.TextBox_GotFocus);
             textBoxlastname.LostFocus += new EventHandler(this.TextLostFocus);
 
         }
-        public void TextGotFocus(object sender, EventArgs e)
+        public void TextBox_GotFocus(object sender, EventArgs e)
         {
+             //MessageBox.Show("ok");
             TextBox tb = (TextBox)sender;
-            if(tb.Text=="First Name")
+            //if(tb.Text=="First Name")
             {
-                MessageBox.Show("ok");
-                tb.Text = "";
+               
+                tb.Clear();
                 tb.ForeColor = Color.Black;
             }
         }
 
         public void TextLostFocus(object sender, EventArgs e)
         {
-            TextBox tb = (TextBox)sender;
-            if (tb.Text == "")
-            {
-                tb.Text = "First Name";
-                tb.ForeColor = Color.LightGray;
-            }
+
         }
 
         private void labelcabrowsimage_Click(object sender, EventArgs e)
@@ -161,12 +159,12 @@ namespace CMSH.View
 
         private void buttontherapistcreate_Click(object sender, EventArgs e)
         {
-
+            sendcdata();
         }
 
         private void buttoncadrcreate_Click(object sender, EventArgs e)
         {
-
+            sendcdata();
         }
 
         private void buttoncaphrback_Click(object sender, EventArgs e)
@@ -181,5 +179,46 @@ namespace CMSH.View
         {
 
         }
+
+        private void buttoncaphrcreate_Click(object sender, EventArgs e)
+        {
+            sendcdata();
+        }
+
+        private void textBoxfirstname_TextChanged(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void sendcdata()
+        {
+            MessageBox.Show("One");
+            String pw = this.password.Text;
+            String rpw = this.textBoxrepassword.Text;
+            if (pw == rpw)
+            {
+                MessageBox.Show("two");
+                User user = new User();
+
+                user.Fname = textBoxfirstname.Text;
+                user.Lname = textBoxlastname.Text;
+                user.Contact = textBoxcontactno.Text;
+                user.Nic = textBoxnicno.Text;
+                user.Username = textBoxusername.Text;
+                user.Password = password.Text;
+                user.Acctype = comboBoxacctype.SelectedText;
+
+                usermng uMng = new usermng();
+                uMng.insert(user);
+            }
+            else
+            {
+
+                MessageBox.Show("there is a error");
+            }
+        }
+
+        
     }
 }
