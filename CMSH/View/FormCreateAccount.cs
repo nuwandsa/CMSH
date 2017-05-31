@@ -78,7 +78,15 @@ namespace CMSH.View
         private void buttoncanext_Click(object sender, EventArgs e)
         {
             buttoncanext.Visible= false;
-            switch (comboBoxacctype.SelectedItem.ToString())
+            String acctype = "";
+            try {
+                acctype = comboBoxacctype.SelectedItem.ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("error passing");
+            }
+            switch (acctype)
             {
                case "Doctor":
                     this.panelcapatient.Visible = true;
@@ -147,7 +155,7 @@ namespace CMSH.View
 
         private void buttoncapatientcreate_Click(object sender, EventArgs e)
         {
-
+            sendcdata();
         }
 
         private void buttontherapistback_Click(object sender, EventArgs e)
@@ -207,7 +215,7 @@ namespace CMSH.View
                 user.Nic = textBoxnicno.Text;
                 user.Username = textBoxusername.Text;
                 user.Password = password.Text;
-                user.Acctype = comboBoxacctype.SelectedText;
+                user.Acctype = comboBoxacctype.SelectedItem.ToString();
 
                 usermng uMng = new usermng();
                 uMng.insert(user);
