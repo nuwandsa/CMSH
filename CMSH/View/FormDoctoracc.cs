@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CMSH.Model;
 
 namespace CMSH.View
 {
@@ -30,6 +31,21 @@ namespace CMSH.View
         private void label2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttondapcheck_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void set_values(string fnme,string lnme)
+        {
+            labeldctrname.Text = fnme+lnme;
+
+        }
+
+        private void labeldctrname_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -173,6 +173,11 @@ namespace CMSH.View
         private void buttoncadrcreate_Click(object sender, EventArgs e)
         {
             sendcdata();
+            User user = new User();
+            usermng umng = new usermng();
+            umng.getdata(user, textBoxusername.Text);
+            
+            senddrdata(user.Userid);
         }
 
         private void buttoncaphrback_Click(object sender, EventArgs e)
@@ -201,12 +206,12 @@ namespace CMSH.View
 
         private void sendcdata()
         {
-            MessageBox.Show("One");
+            //MessageBox.Show("One");
             String pw = this.password.Text;
             String rpw = this.textBoxrepassword.Text;
             if (pw == rpw)
             {
-                MessageBox.Show("two");
+                //MessageBox.Show("two");
                 User user = new User();
 
                 user.Fname = textBoxfirstname.Text;
@@ -218,8 +223,9 @@ namespace CMSH.View
                 user.Acctype = comboBoxacctype.SelectedItem.ToString();
 
                 usermng uMng = new usermng();
-                uMng.insert(user);
-            }
+                string qry= "insert into cmshdb.users(fname,lname,contact,nic,username,password,acctype)values('" + user.Fname + "','" + user.Lname + "','" + user.Contact + "','" + user.Nic + "','" + user.Username + "','" + user.Password + "','" + user.Acctype + "');";
+                uMng.insert(/*user*/qry);
+                            }
             else
             {
 
@@ -227,6 +233,35 @@ namespace CMSH.View
             }
         }
 
-        
+        private void senddrdata(int uid)
+        {
+            String pw = this.password.Text;
+            String rpw = this.textBoxrepassword.Text;
+            if (pw == rpw)
+            {
+                //MessageBox.Show("two");
+                Doctors doctors = new Doctors();
+
+                doctors.Regno = textBoxcadrgrn.Text;
+                doctors.Qualification = textBoxcadrpq.Text;
+                doctors.Designation = textBoxcadrdesignation.Text;
+                doctors.Hospital = textBoxcadrcurrenthospital.Text;
+
+
+
+
+                usermng uMng = new usermng();
+                string qry = "insert into cmshdb.doctors(userid,regno,qualifications,designation,hospital)values('"+uid+"','"+ doctors.Regno + "','" + doctors.Qualification + "','" + doctors.Designation + "','" + doctors.Hospital + "')";
+                uMng.insert(qry);
+            }
+            else
+            {
+
+                MessageBox.Show("there is a error");
+            }
+
+        }
+
+
     }
 }

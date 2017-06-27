@@ -84,6 +84,12 @@
     <Compile Include="View\FormCreateAccount.Designer.cs">
       <DependentUpon>FormCreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Formtechacc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Formtechacc.Designer.cs">
+      <DependentUpon>Formtechacc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FormDoctoracc.resx">
       <DependentUpon>FormDoctoracc.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormCreateAccount.resx">
       <DependentUpon>FormCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Formtechacc.resx">
+      <DependentUpon>Formtechacc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
