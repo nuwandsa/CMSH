@@ -33,5 +33,10 @@ namespace CMSH.View
         {
             this.Close(); 
         }
+
+        private void buttondapcheck_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

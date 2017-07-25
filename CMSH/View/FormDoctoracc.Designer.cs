@@ -42,6 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxdapid = new System.Windows.Forms.TextBox();
             this.paneldapatient = new System.Windows.Forms.Panel();
+            this.label1dapnicn = new System.Windows.Forms.Label();
+            this.labeldapbmin = new System.Windows.Forms.Label();
             this.buttondanewp = new System.Windows.Forms.Button();
             this.buttondapncd = new System.Windows.Forms.Button();
             this.buttondaptherapies = new System.Windows.Forms.Button();
@@ -87,7 +89,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(706, 177);
+            this.panel2.Size = new System.Drawing.Size(706, 189);
             this.panel2.TabIndex = 1;
             // 
             // labeldctrqualifications
@@ -229,6 +231,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.paneldapatient.BackColor = System.Drawing.Color.Transparent;
+            this.paneldapatient.Controls.Add(this.label1dapnicn);
+            this.paneldapatient.Controls.Add(this.labeldapbmin);
             this.paneldapatient.Controls.Add(this.buttondanewp);
             this.paneldapatient.Controls.Add(this.buttondapncd);
             this.paneldapatient.Controls.Add(this.buttondaptherapies);
@@ -253,9 +257,31 @@
             this.paneldapatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paneldapatient.Location = new System.Drawing.Point(0, 249);
             this.paneldapatient.Name = "paneldapatient";
-            this.paneldapatient.Size = new System.Drawing.Size(703, 457);
+            this.paneldapatient.Size = new System.Drawing.Size(703, 470);
             this.paneldapatient.TabIndex = 11;
             this.paneldapatient.Visible = false;
+            // 
+            // label1dapnicn
+            // 
+            this.label1dapnicn.AutoSize = true;
+            this.label1dapnicn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1dapnicn.ForeColor = System.Drawing.Color.White;
+            this.label1dapnicn.Location = new System.Drawing.Point(54, 437);
+            this.label1dapnicn.Name = "label1dapnicn";
+            this.label1dapnicn.Size = new System.Drawing.Size(58, 20);
+            this.label1dapnicn.TabIndex = 24;
+            this.label1dapnicn.Text = "Meters";
+            // 
+            // labeldapbmin
+            // 
+            this.labeldapbmin.AutoSize = true;
+            this.labeldapbmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldapbmin.ForeColor = System.Drawing.Color.White;
+            this.labeldapbmin.Location = new System.Drawing.Point(54, 405);
+            this.labeldapbmin.Name = "labeldapbmin";
+            this.labeldapbmin.Size = new System.Drawing.Size(58, 20);
+            this.labeldapbmin.TabIndex = 23;
+            this.labeldapbmin.Text = "Meters";
             // 
             // buttondanewp
             // 
@@ -267,6 +293,7 @@
             this.buttondanewp.TabIndex = 22;
             this.buttondanewp.Text = "New Patient";
             this.buttondanewp.UseVisualStyleBackColor = false;
+            this.buttondanewp.Click += new System.EventHandler(this.buttondanewp_Click);
             // 
             // buttondapncd
             // 
@@ -312,6 +339,7 @@
             this.buttondapcheckups.Text = "Recommend";
             this.buttondapcheckups.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.buttondapcheckups.UseVisualStyleBackColor = false;
+            this.buttondapcheckups.Click += new System.EventHandler(this.buttondapcheckups_Click_1);
             // 
             // buttondapprescribe
             // 
@@ -422,7 +450,7 @@
             this.labeldapnic.AutoSize = true;
             this.labeldapnic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeldapnic.ForeColor = System.Drawing.Color.White;
-            this.labeldapnic.Location = new System.Drawing.Point(59, 242);
+            this.labeldapnic.Location = new System.Drawing.Point(59, 248);
             this.labeldapnic.Name = "labeldapnic";
             this.labeldapnic.Size = new System.Drawing.Size(101, 20);
             this.labeldapnic.TabIndex = 9;
@@ -477,7 +505,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(9, 242);
+            this.label7.Location = new System.Drawing.Point(9, 248);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 20);
             this.label7.TabIndex = 3;
@@ -531,7 +559,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(705, 706);
+            this.ClientSize = new System.Drawing.Size(705, 718);
             this.Controls.Add(this.buttondapcheck);
             this.Controls.Add(this.paneldapatient);
             this.Controls.Add(this.textBoxdapid);
@@ -565,7 +593,7 @@
         private System.Windows.Forms.PictureBox pictureBoxdadrimg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxdapid;
+        public System.Windows.Forms.TextBox textBoxdapid;
         private System.Windows.Forms.Panel paneldapatient;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label labeldapbmi;
@@ -589,6 +617,8 @@
         private System.Windows.Forms.Button buttondapprescribe;
         private System.Windows.Forms.Button buttondapstatus;
         private System.Windows.Forms.Button buttondapcheck;
+        private System.Windows.Forms.Label label1dapnicn;
+        private System.Windows.Forms.Label labeldapbmin;
     }
     
 }

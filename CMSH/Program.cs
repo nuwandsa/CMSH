@@ -17,7 +17,15 @@ namespace CMSH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormHomePage());
+
+            try
+            {
+                Application.Run(new FormHomePage());
+            }
+            catch(Exception en)
+            {
+                MessageBox.Show(en.Message);
+            }
             
         }
     }

@@ -41,12 +41,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttondapcheck = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.labeltechapnic = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labeltechapname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxtechpid = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.labeltechapnic = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtechimg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -198,6 +198,7 @@
             this.buttondapcheck.TabIndex = 13;
             this.buttondapcheck.Text = "Check";
             this.buttondapcheck.UseVisualStyleBackColor = false;
+            this.buttondapcheck.Click += new System.EventHandler(this.buttondapcheck_Click);
             // 
             // panel3
             // 
@@ -213,6 +214,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(659, 295);
             this.panel3.TabIndex = 6;
+            // 
+            // labeltechapnic
+            // 
+            this.labeltechapnic.AutoSize = true;
+            this.labeltechapnic.BackColor = System.Drawing.Color.Transparent;
+            this.labeltechapnic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltechapnic.ForeColor = System.Drawing.Color.White;
+            this.labeltechapnic.Location = new System.Drawing.Point(70, 205);
+            this.labeltechapnic.Name = "labeltechapnic";
+            this.labeltechapnic.Size = new System.Drawing.Size(29, 20);
+            this.labeltechapnic.TabIndex = 5;
+            this.labeltechapnic.Text = "No";
             // 
             // label5
             // 
@@ -264,18 +277,6 @@
             this.label3.Size = new System.Drawing.Size(139, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Patient ID/NIC No:";
-            // 
-            // labeltechapnic
-            // 
-            this.labeltechapnic.AutoSize = true;
-            this.labeltechapnic.BackColor = System.Drawing.Color.Transparent;
-            this.labeltechapnic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltechapnic.ForeColor = System.Drawing.Color.White;
-            this.labeltechapnic.Location = new System.Drawing.Point(70, 205);
-            this.labeltechapnic.Name = "labeltechapnic";
-            this.labeltechapnic.Size = new System.Drawing.Size(29, 20);
-            this.labeltechapnic.TabIndex = 5;
-            this.labeltechapnic.Text = "No";
             // 
             // Formtechacc
             // 

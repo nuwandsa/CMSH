@@ -84,6 +84,24 @@
     <Compile Include="View\FormCreateAccount.Designer.cs">
       <DependentUpon>FormCreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPatient.Designer.cs">
+      <DependentUpon>FormPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Formrcmndcheckups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Formrcmndcheckups.Designer.cs">
+      <DependentUpon>Formrcmndcheckups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Formrecommendtherapies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Formrecommendtherapies.Designer.cs">
+      <DependentUpon>Formrecommendtherapies.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Formtechacc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +121,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormCreateAccount.resx">
       <DependentUpon>FormCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPatient.resx">
+      <DependentUpon>FormPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Formrcmndcheckups.resx">
+      <DependentUpon>Formrcmndcheckups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Formrecommendtherapies.resx">
+      <DependentUpon>Formrecommendtherapies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Formtechacc.resx">
       <DependentUpon>Formtechacc.cs</DependentUpon>
